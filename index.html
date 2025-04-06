@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #121212;
+      color: #EEEEEE;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #1F1F1F;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      color: #00ADB5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #EEEEEE;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #FF2E63;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #00ADB5;
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: #1E1E1E;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00ADB5;
+    }
+
+    .contact a {
+      color: #FF2E63;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1F1F1F;
+      font-size: 0.9rem;
+    }
+    .justify{
+        text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="typewriter"></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="justify">
+        I'm a passionate and results-driven <strong>Full Stack Developer</strong> with a strong foundation in both frontend and backend technologies.
+        I specialize in building responsive, scalable, and user-friendly web applications from concept to deployment. With experience in modern frameworks
+        like <strong>React</strong>, <strong>Node.js</strong>, and <strong>Express</strong>, as well as databases like <strong>MongoDB</strong> and <strong>PostgreSQL</strong>,
+        I love solving complex problems and bringing ideas to life through clean, maintainable code.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Speech to Sign Language Translation Tool</h3>
+        <p>A Web Application which takes in live audio speech recording as input, converts it into 
+            text and displays the relevant Indian Sign Language animations.
+        </p>
+      </div>
+      <div class="project-card">
+        <h3>NSE Stock Correlation Tool</h3>
+        <p>The stock correlation tool built with Streamlit allows users to analyze the correlations 
+            between stocks listed on the NSE (National Stock Exchange) over a selected time period. 
+            The purpose of this tool is to help investors and analysts identify highly correlated 
+            stock pairs, which can inform hedging strategies and diversification decisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via <a href="mailto:youremail@example.com">vinaykamsala03@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/vinay-kamsala-b80522255/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3By1L3s82FRhOUfFKrpyDoTA%3D%3D" target="_blank">LinkedIn</a>.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 K.Venkata Sai Vinay. All rights reserved.</p>
+  </footer>
+  <script>
+    const text = "KAMSALA VENKATA SAI VINAY";
+    let index = 0;
+  
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 150);
+      }
+    }
+  
+    window.onload = typeWriter;
+  </script>
+  
+</body>
+
+</html>
